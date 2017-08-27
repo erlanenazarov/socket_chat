@@ -1,8 +1,8 @@
 'use strict';
 
-let _settings = require('./settings');
+let s_settings = require('./settings');
 
-let settings = _interopRequireWildcard(_settings);
+let settings = _interopRequireWildcard(s_settings);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { let newObj = {}; if (obj != null) { for (let key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
