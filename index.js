@@ -17,7 +17,7 @@ var chat = io.of('/chat').on('connection', function (socket) {
     console.log(data.room + ': ' + data.message);
     var room = data.room;
     var message = data.message;
-    socket.to(room).broadcast.emit('a message', message);
+    socket.to(room).broadcast.emit('a message', data);
   }).on('join a room', function (data) {
     console.log(data.room);
     socket.join(data.room);
@@ -25,4 +25,3 @@ var chat = io.of('/chat').on('connection', function (socket) {
     console.log('disconnect');
   });
 });
-
